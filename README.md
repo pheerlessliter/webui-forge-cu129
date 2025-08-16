@@ -43,14 +43,19 @@ Python 3.10.6: https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe
 
 ### Possibly Needed, depending on your environment
 Visual Studio Community 2022: https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030
+
 Visual Studio Build Tool 2022 (select Desktop development with C++ during install, or modify after install to include): https://aka.ms/vs/17/release/vs_BuildTools.exe
+
 Cargo: https://win.rustup.rs/x86_64
 
 ### Building from source
-1. Clone the repo into a working directory
-  a. git clone git@github.com:pheerlessliter/webui-forge-cu129.git
-2. Navigate to the cloned webui-forge-cu129 directory and run the webui.bat file
-  a. If you only want to run locally, make sure your windows Firewall settings are set to a private network, otherwise you'll get errors at the end of the python install
+* Clone the repo into a working directory
+
+  * `git clone git@github.com:pheerlessliter/webui-forge-cu129.git`
+
+* Navigate to the cloned webui-forge-cu129 directory and run the webui.bat file
+
+  * If you only want to run locally, make sure your windows Firewall settings are set to a private network, otherwise you'll get errors at the end of the python install
 
 NOTE: If you run into any issues, or just want a clean install, delete the tmp, venv, and repositories folders and re-run webui.bat file. 
 
