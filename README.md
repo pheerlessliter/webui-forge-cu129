@@ -36,29 +36,23 @@ News are moved to this link: [Click here to see the News section](https://github
 
 # Installing Forge
 
-**Just use this one-click installation package (with git and python included).**
+## Advanced Install
 
-[>>> Click Here to Download One-Click Package (CUDA 12.1 + Pytorch 2.3.1) <<<](https://github.com/lllyasviel/stable-diffusion-webui-forge/releases/download/latest/webui_forge_cu121_torch231.7z)
+### Prerequisites
+Python 3.10.6: https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe
 
-Some other CUDA/Torch Versions:
+### Possibly Needed, depending on your environment
+Visual Studio Community 2022: https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030
+Visual Studio Build Tool 2022 (select Desktop development with C++ during install, or modify after install to include): https://aka.ms/vs/17/release/vs_BuildTools.exe
+Cargo: https://win.rustup.rs/x86_64
 
-[Forge with CUDA 12.1 + Pytorch 2.3.1](https://github.com/lllyasviel/stable-diffusion-webui-forge/releases/download/latest/webui_forge_cu121_torch231.7z) <- **Recommended**
+### Building from source
+1. Clone the repo into a working directory
+  a. git clone git@github.com:pheerlessliter/webui-forge-cu129.git
+2. Navigate to the cloned webui-forge-cu129 directory and run the webui.bat file
+  a. If you only want to run locally, make sure your windows Firewall settings are set to a private network, otherwise you'll get errors at the end of the python install
 
-[Forge with CUDA 12.4 + Pytorch 2.4](https://github.com/lllyasviel/stable-diffusion-webui-forge/releases/download/latest/webui_forge_cu124_torch24.7z) <- **Fastest**, but MSVC may be broken, xformers may not work
-
-[Forge with CUDA 12.1 + Pytorch 2.1](https://github.com/lllyasviel/stable-diffusion-webui-forge/releases/download/latest/webui_forge_cu121_torch21.7z) <- the previously used old environments
-
-After you download, you uncompress, use `update.bat` to update, and use `run.bat` to run.
-
-Note that running `update.bat` is important, otherwise you may be using a previous version with potential bugs unfixed.
-
-![image](https://github.com/lllyasviel/stable-diffusion-webui-forge/assets/19834515/c49bd60d-82bd-4086-9859-88d472582b94)
-
-### Advanced Install
-
-If you are proficient in Git and you want to install Forge as another branch of SD-WebUI, please see [here](https://github.com/continue-revolution/sd-webui-animatediff/blob/forge/master/docs/how-to-use.md#you-have-a1111-and-you-know-git). In this way, you can reuse all SD checkpoints and all extensions you installed previously in your OG SD-WebUI, but you should know what you are doing.
-
-If you know what you are doing, you can also install Forge using same method as SD-WebUI. (Install Git, Python, Git Clone the forge repo `https://github.com/lllyasviel/stable-diffusion-webui-forge.git` and then run webui-user.bat).
+NOTE: If you run into any issues, or just want a clean install, delete the tmp, venv, and repositories folders and re-run webui.bat file. 
 
 ### Previous Versions
 
