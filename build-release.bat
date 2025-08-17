@@ -36,6 +36,7 @@ robocopy "%REPO_DIR%\modules_forge" "%WEBUI_DST%\modules_forge" /E
 robocopy "%REPO_DIR%\repositories" "%WEBUI_DST%\repositories" /E
 robocopy "%REPO_DIR%\scripts" "%WEBUI_DST%\scripts" /E
 robocopy "%REPO_DIR%\tmp" "%WEBUI_DST%\tmp" /E
+robocopy "%REPO_DIR%\packages_3rdparty" "%WEBUI_DST%\packages_3rdparty" /E
 if exist "%PYTHON_SRC%\python310.dll" copy "%PYTHON_SRC%\python310.dll" "%PYTHON_DST%\python310.dll"
 if exist "%PYTHON_SRC%\pythonw.exe" copy "%PYTHON_SRC%\pythonw.exe" "%PYTHON_DST%\pythonw.exe"
 
@@ -69,6 +70,28 @@ if exist "%REPO_DIR%\transformers-cache" (
     robocopy "%REPO_DIR%\transformers-cache" "%RELEASE_ROOT%\system\transformers-cache" /E
 )
 
+:: 9. Clean up unnecessary files
+echo Cleaning up unnecessary files...
+REM Remove all __pycache__ folders recursively
+for /d /r "%RELEASE_ROOT%" %%d in (__pycache__) do (
+    if exist "%%d" rmdir /s /q "%%d"
+)
+
+REM Remove all tests folders recursively
+for /d /r "%RELEASE_ROOT%" %%d in (tests) do (
+    if exist "%%d" rmdir /s /q "%%d"
+)
+
 echo Release built at %RELEASE_ROOT%
 endlocal
 pause
+
+:: Compression instructions
+:: 7z
+:: 9 - Ultra
+:: LZMA2
+:: Dictionary 1024mb
+:: Word 256
+:: Solid
+:: Max Threads
+:: 80% Mem Usage

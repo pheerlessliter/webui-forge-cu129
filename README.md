@@ -53,11 +53,24 @@ Cargo: https://win.rustup.rs/x86_64
 
   * `git clone git@github.com:pheerlessliter/webui-forge-cu129.git`
 
-* Navigate to the cloned webui-forge-cu129 directory and run the webui.bat file
+* Navigate to the cloned webui-forge-cu129 directory and run the webui-user.bat file
 
   * If you only want to run locally, make sure your windows Firewall settings are set to a private network, otherwise you'll get errors at the end of the python install
 
-NOTE: If you run into any issues, or just want a clean install, delete the tmp, venv, and repositories folders and re-run webui.bat file. 
+NOTES: 
+
+* If you run into any issues, or just want a clean install, delete the tmp, venv, and repositories folders and re-run webui-user.bat file. 
+
+* There's a current bug where you may have to run the webui-user.bat file twice on the first run to get the website to properly open without using remote connectivity.
+
+### Easier run method (Tested on Windows only currently)
+* Download the release parts from here and extract the first one (make sure you save them all to the same directory so they will reconstruct): https://github.com/pheerlessliter/webui-forge-cu129/releases/tag/1.0.0
+
+* Unpack the 7zip file into your destination of choice
+
+* Run the update.bat file
+
+* Run the run.bat file (The first run may take upwards of 10 minutes to finish setting up. Be patient!)
 
 ### Previous Versions
 
